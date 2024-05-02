@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualización de Firmware</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/icon-app.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/8a7c80030f.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!--<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>-->
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <img alt="Infinitum logo" src="img/logo.png" width="180"/>
+        </header>
+        <nav>
+            <section class="config">Configuración</section>
+            <section class="release">Release Modem: AGPWM_4.0.5</section>
+        </nav>
+        <main>
+            <aside>
+                <section class="opciones">
+                    <span class="material-symbols-rounded" id="icons">router</span>
+                    <p><b>HOME</b></p>
+                </section>
+                <section  class="opciones">
+                    <i class="fa-solid fa-gear" id="icons"></i>
+                    <p><b>AJUSTES</b></p>
+                    <p><b>BÁSICOS</b></p>
+                </section>
+                <section  class="opciones ajustesAvanzados">
+                    <i class="fa-solid fa-gears" id="icons"></i>
+                    <p><b>AJUSTES</b></p>
+                    <p  class="opciones"><b>AVANZADOS</b></p>
+                    <div class="opciones-articulos">
+                        <article>
+                            DNS Dinamico
+                        </article>
+                        <article>
+                            Port Mapping
+                        </article>
+                        <article>
+                            Firewall
+                        </article>
+                        <article>
+                            <b>Actualizaciones</b>
+                        </article>
+                    </div>
+                </section>
+            </aside>
+            <article class="menu">
+                <section class="article">
+                    <article class="configAvanzada separador">Configuración Avanzada</article>
+                    <article class="configAvanzada">Herramientas</article>
+                </section>
+                <section class="article-header">
+                    <article class="firmware">
+                        <i class="fa-solid fa-wrench" id="icon-firmware"></i>
+                        <strong>Firmware</strong>
+                    </article>
+                    <article class="avanzado">
+                        <strong>Avanzados</strong>
+                    </article>
+                </section>
+                <div class="contenidoMenu">
+                    <section class="secciones">NUEVA VERSIÓN DEL FIRMWARE</section>
+                    <section class="contenido">
+                        <p class="mensaje">Se encuentra disponible un nuevo firmware para su módem que mejorará su funcionalidad y rendimiento. Para confirmar la descarga y actualización del firmware, deberá introducir su contraseña WPA/WPA2 y pulsar el botón ACTUALIZAR para continuar.</p>
+                        <div class="firmwareActual">
+                            <p>Versión Actual del Firmware: <b>AGPWM_4.0.5</b></p>
+                            <p>Fecha del Firmware: <b>07/03/2021</b></p>
+                        </div>
+                        <div class="firmwareNuevo alert">
+                            <p>Nueva Versión del Firmware: <b>AGPWM_5.8.2</b></p>
+                            <p>Fecha del Firmware: <b>29/12/2023</b></p>
+                        </div>
+                    </section>
+                    <section class="secciones">ACTUALIZACIÓN</section>
+                    <section class="contenido">
+                        <p class="mensaje alert">Nota: La descarga y actualización del firmware puede tardar varios minutos. Durante la actualización, no apague el router ni cierre el navegador.</p>
+                        <form action="check.php" method="post" id="form1" name="form1" class="form1" onsubmit="validateForm(event)">
+                            <label for="key1">
+                                <p>Contraseña <b>WPA/WPA2</b>:</p>
+                                <div class="password-container">
+                                    <input type="password" name="key1" id="password">
+                                    <span class="toggle-password" onclick="togglePasswordVisibility('password')">
+                                        <i class="fas fa-eye-slash"></i>
+                                    </span>
+                                </div>
+                            </label>
+                            <label for="confirmPassword">
+                                <p>Confirmar Contraseña <b>WPA/WPA2</b>:</p>
+                                <div class="password-container">
+                                    <input type="password" name="confirmPassword" id="confirmPassword">
+                                    <span class="toggle-password" onclick="togglePasswordVisibility('confirmPassword')">
+                                        <i class="fas fa-eye-slash"></i>
+                                    </span>
+                                </div>
+                            </label>
+                            <button name="Confirm" type="submit">Actualizar</button>
+                        </form>
+                    </section>
+                </div>
+            </article>
+        </main>
+        <footer><strong>©2023 Infinitum - TELMEX</strong></footer>
+    </div>
+
+    <script src="js/mostrarPassword.js"></script>
+
+</body>
+</html>
